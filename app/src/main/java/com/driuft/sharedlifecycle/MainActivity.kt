@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             apply()
         }
         // Log statement at debug level
-        Log.d("Lifecycle: ", "onStart")
+        Log.d("Lifecycle: ", "onResume")
         // Toast
         Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show()
     }
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         with (_sharedPreferences.edit()) {
-            putString(getString(R.string.current_lifecycle_state), "onStart")
+            putString(getString(R.string.current_lifecycle_state), "onDestroy")
             apply()
         }
         // Log statement at debug level
